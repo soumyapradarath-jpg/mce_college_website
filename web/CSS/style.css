@@ -1,0 +1,148 @@
+/* css/style.css - admissions + site styles (save as css/style.css) */
+
+:root{
+  --deep:#003366;
+  --mid:#0055aa;
+  --muted:#666;
+  --card:#ffffff;
+  --bg:#f6f8fc;
+  --accent:#c41b1b;
+  --max-width:1200px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background:var(--bg);
+  color:#222;
+}
+
+.site-header{
+  background:var(--deep);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 20px;
+}
+.site-header .brand{ font-weight:700; font-size:18px; letter-spacing:0.6px; }
+.top-nav a{ color:white; text-decoration:none; margin-left:12px; font-weight:600; opacity:0.95; }
+.top-nav a.active{ text-decoration:underline; }
+
+.page{ max-width:var(--max-width); margin:18px auto; padding:0 16px; }
+.page-title h1{ color:var(--deep); margin:0; font-size:22px; }
+.page-title .lead{ color:var(--muted); margin-top:6px; }
+
+/* layout */
+.layout{ display:flex; gap:20px; margin-top:18px; align-items:flex-start; }
+.form-column{ flex:1 1 70%; min-width:320px; }
+.aside-column{ width:320px; flex-shrink:0; }
+
+/* cards */
+.card{
+  background:var(--card);
+  border-radius:10px;
+  padding:14px 16px;
+  box-shadow:0 6px 18px rgba(10,30,80,0.06);
+  margin-bottom:16px;
+  border:1px solid rgba(0,0,0,0.04);
+}
+fieldset.card{ border:none; padding:0; margin:0 0 12px 0; }
+
+/* grid helpers */
+.grid-2{ display:flex; gap:12px; }
+.grid-3{ display:flex; gap:12px; }
+.grid-2 > label, .grid-3 > label{ flex:1; }
+
+/* inputs */
+label{ display:block; margin-top:10px; font-weight:600; color:var(--deep); font-size:13px; }
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea{
+  width:100%; padding:9px 10px; border-radius:8px; border:1px solid #d6ddec; margin-top:6px; font-size:14px;
+}
+textarea{ min-height:80px; }
+
+/* buttons */
+.actions{ display:flex; justify-content:flex-end; gap:10px; margin-top:6px; }
+.btn{ padding:10px 14px; border-radius:8px; cursor:pointer; border:none; font-weight:700; }
+.btn.primary{ background:var(--mid); color:white; }
+.btn.ghost{ background:white; color:var(--deep); border:1px solid rgba(0,0,0,0.06); }
+
+/* preview */
+.preview{ text-align:center; }
+.avatar{
+  width:120px; height:120px; border-radius:50%; margin:10px auto; background:#efefef;
+  background-image:url('../images/default-avatar.png'); background-size:cover; background-position:center; border:2px solid rgba(0,0,0,0.06);
+}
+.preview-info{ margin-top:8px; color:var(--muted); font-size:14px; }
+.preview-info strong{ color:var(--deep); display:block; margin-bottom:6px; }
+
+/* fees */
+.fees .fee-row{ display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px dashed #e9eef8; color:#222; font-weight:600; }
+.fees .total{ font-size:1.1em; color:var(--mid); }
+
+/* docs list */
+.docs-list div{ margin-top:6px; color:var(--muted); font-size:14px; }
+
+/* small helpers */
+.muted{ color:var(--muted); font-size:13px; }
+
+/* responsive */
+@media(max-width:1000px){
+  .layout{ flex-direction:column; }
+  .aside-column{ width:100%; order:2; }
+  .form-column{ order:1; }
+  .grid-2, .grid-3{ flex-direction:column; }
+}
+/* Your old CSS here (the one you pasted) ... */
+
+/* --- Bonus Section Added Below --- */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #007BFF;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1000;
+}
+
+.course-card {
+  background: #f5f9ff;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #d0e4ff;
+}
+.course-card h4 {
+  margin: 0;
+  color: #084b9a;
+}
+.course-card p {
+  margin: 2px 0 4px;
+  color: #555;
+}
+.course-card .fee {
+  color: #007bff;
+  font-weight: bold;
+}
+.card { transition: all 0.5s ease-in-out; }
+.college-logo {
+    height: 40px;       /* adjust as needed */
+    width: auto;        /* maintain aspect ratio */
+    margin-right: 10px; /* space between logo and brand */
+    vertical-align: middle;
+}
+.site-header .brand {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.6px;
+}
